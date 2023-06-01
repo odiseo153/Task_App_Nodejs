@@ -1,0 +1,64 @@
+<%- include("./encabezado.ejs",{titulo:'Task'})  %>
+
+<body>
+
+<a href="/create"> 
+<button style="--content: 'Crear Tarea!';" id="hover"  href="https://twitter.com/kamildyrek">
+  <div class="left"></div>
+   ________________
+  <div class="right"></div>
+</button>
+</a>
+<table class="table table-hover" id="tablaS">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Tarea</th>
+      <th scope="col">Inicio</th>
+      <th scope="col">Fin</th>
+      <th scope="col">status</th>
+      <th scope="col">Acciones</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+
+<% data.forEach(e => { %>
+
+ <tr>  
+      <th scope="row"><%=e.id %></th>
+      <td><%=e.tarea  %></td>
+      <td><%=e.inicio  %></td>
+      <td><%=e.fin %></td>
+      <td>
+<div class="mb-3">
+  <select class="form-select" name="estatus">
+      <option value="pendiente">
+
+Pendiente</option>
+      <option value="en-proceso">En proceso</option>
+      <option value="completada">Completada</option>
+    </select>
+  </div>
+</td>
+
+   <td class="d-flex gap-2">
+<a href="/update/<%=e.id %>" class="btn btn-success">Editar</a>
+<a href="/delete/<%=e.id %>" class="btn btn-danger">Eliminar</a>
+
+
+    </td>
+</tr> 
+
+<% }) %>
+
+<a>
+</a>
+
+
+
+
+  </tbody>
+</table>
+
+</body>

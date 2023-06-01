@@ -1,0 +1,48 @@
+<%- include("./encabezado.ejs",{titulo:'Edit'})  %>
+<body>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="card-body">
+
+<% datos.forEach(e=> { %>  
+
+<% if(e.id == id){ %>
+
+<form>
+          <input
+            type="text"
+            class="form-control mb-2"
+            autofocus
+            value=<%=e.tarea%>
+          >
+
+          <input
+            type="text"
+            class="form-control mb-2"
+            value=<%=e.inicio%>
+          >
+
+          <input
+            type="text"
+            class="form-control mb-2"
+            value=<%=e.fin%>
+          >
+
+          <input
+            type="text"
+            class="form-control mb-2"
+            value=<%=e.status%>
+          >
+
+          <button type="submit" class="btn btn-info">save customer</button>
+        </form>
+<% } %>
+<% }) %>
+      
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

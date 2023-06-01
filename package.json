@@ -1,0 +1,24 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "App de tareas hecha con nodejs",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "nodemon main.js" 
+  },
+  "keywords": [
+    "odiseo"
+  ],
+  "author": "odiseo esmerlin rincon sanchez",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-icons": "^1.10.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mysql2": "^3.3.2",
+    "node": "^20.2.0",
+    "nodemon": "^2.0.22",
+    "sequelize": "^6.31.1"
+  }
+}

@@ -1,0 +1,31 @@
+<%- include("./encabezado.ejs",{titulo:'Create'})  %>
+
+
+<body>
+
+<form action="/insert" method="POST" id="foma">
+
+  <div class="mb-3">
+    <label for="tarea" class="form-label">Tarea</label>
+    <input type="text" class="form-control" name="tarea" placeholder="Ingrese la tarea">
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <label for="inicio" class="form-label">Inicio</label>
+      <input type="date" class="form-control" name="inicio">
+    </div>
+
+    <div class="col">
+      <label for="fin" class="form-label">Fin</label>
+      <input type="date" class="form-control" name="fin">
+    </div>
+  </div>
+
+  
+
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+
+
+</body>
